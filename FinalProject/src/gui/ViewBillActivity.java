@@ -109,18 +109,20 @@ try {
 	    		 if(rsc.getInt("BILL_OWNER_ID")==groupIntIdArray[i])
 	    		 {
 	    			 billList.add(rsc.getInt("BILL_ID"));
+	    			 System.out.println(rsc.getInt("BILL_ID"));
 	    			 rowCount++;
 	    		 }
 	    	 }
 	    	 
 	    	}
+	     System.out.println(rowCount);
 	     connection2.close();
-			BillIDArray=new Object[elementCount];
+			BillIDArray=new Object[rowCount];
 			BillIDArray=billList.toArray();
-			BillIntIdArray=new int[elementCount];
+			BillIntIdArray=new int[rowCount];
 			for(int i=0;i<rowCount;i++)
 	    	 {
-
+			     System.out.println(i);
 				BillIntIdArray[i]=(int)BillIDArray[i];
 	    	 }
 		     int count=0;

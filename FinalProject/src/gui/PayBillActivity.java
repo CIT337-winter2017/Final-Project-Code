@@ -149,9 +149,9 @@ public void startActivity(){
 	    	 
 	    	}
 	     connection2.close();
-			BillIDArray=new Object[elementCount];
+			BillIDArray=new Object[rowCount];
 			BillIDArray=billList.toArray();
-			BillIntIdArray=new int[elementCount];
+			BillIntIdArray=new int[rowCount];
 			for(int i=0;i<rowCount;i++)
 	    	 {
 
