@@ -149,8 +149,11 @@ public RegisterActivity(JPanel newCards, CardLayout newLayout){
 		PreparedStatement prepared = null;
 		String query = "";
 		try{
-			 
-			Connection connection = SQLConnection.getInstance().getConn();
+			String conn = "jdbc:sqlserver://cit337.database.windows.net:1433;" +
+					"database=CSE337;user=afdanaj@cit337;password=Temp12345;"+
+					"encrypt=true;trustServerCertificate=false;" +
+					"hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+			Connection connection = DriverManager.getConnection(conn);
 		   
 		    query = "INSERT INTO Users (USER_USERNAME, USER_PASSWORD, USER_FNAME, USER_LASTNAME, USER_GROUP_ID)" +
 							"VALUES (?, ?, ?, ?, ?)";
